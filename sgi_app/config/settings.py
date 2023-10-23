@@ -36,7 +36,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'test_flet'
+    'test_flet',
+    'login'
 ]
 
 MIDDLEWARE = [
@@ -55,10 +56,8 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-                 BASE_DIR / "view",
-                # Otras rutas de directorios de plantillas, si las tienes
-                ],
+        'DIRS': (BASE_DIR / "templates", "views"),
+
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -82,7 +81,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'sgi_tesis',
          'USER': 'angel',
-        'PASSWORD': 'starwar1',
+        'PASSWORD': 'Starwar1',
         #'HOST': '192.168.18.71',
         'HOST': 'localhost',
         #'HOST': '192.168.219.11',

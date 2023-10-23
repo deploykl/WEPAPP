@@ -1,5 +1,11 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 
+@login_required
+def LOGIN(request):
+    return render(request, 'index.html', None)
 
-def INDEX(request):
-    return render(request, "main/login.html", None)
+# SALIDA DE LA SESION
+def LOGOUT(request):
+    logout(request)
+    return redirect('index')

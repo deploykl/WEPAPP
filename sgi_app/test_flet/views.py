@@ -1,7 +1,5 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from flet_django.views import ft_view
-import flet as ft
 # Create your views here.
 
 def index(request):
